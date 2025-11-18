@@ -1,0 +1,29 @@
+// Breakpoints
+$mobile: 360px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1440px;
+
+// Fonts
+
+$main-font: "IBM Plex Sans", sans-serif;
+
+// Colors
+
+$white: #ffffff;
+$accent: #57e1ff;
+$dark-1: #030718;
+
+$text-primery: $white;
+$text-secondary: #030718;
+$btn-accent: $accent;
+$btn-outline-accent: rgba(87, 225, 255, 0.2);
+
+$section-bg-dark: $dark-1;
+
+// Container sizes
+
+$container-mobile: 100%;
+$container-tablet: 760px;
+$container-desktop: 1000px;
+$container-large: 1320px;

@@ -1,0 +1,10 @@
+@use "./variables" as *;
+
+@mixin respond($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+// Example usage:
+// @include respond($tablet) { ... }
