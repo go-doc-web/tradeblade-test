@@ -6,7 +6,6 @@
   max-width: $container-mobile;
   margin: 0 auto;
   padding: 0 16px;
-  background-color: teal;
 
   @include respond($tablet) {
     max-width: $container-tablet;

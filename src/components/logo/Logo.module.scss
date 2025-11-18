@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+@use "../../styles/_mixins.scss" as *;
+
+.logo {
+  position: relative;
+  left: -1rem;
+
+  img {
+    width: 10.7rem;
+    height: 5.2rem;
+
+    @include respond($desktop) {
+      width: 13.2rem;
+      height: 6.4rem;
+    }
+  }
+}

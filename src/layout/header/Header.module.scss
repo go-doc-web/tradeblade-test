@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+@use "../../styles/_mixins.scss" as *;
+
+.header {
+  height: 5.2rem;
+  background-color: $section-bg-dark;
+
+  @include respond($desktop) {
+    height: 6.4rem;
+  }
+}
+
+.containerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.navLink {
+  @include respond($desktop) {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: calc(1.7rem / 1.4rem);
+    color: $text-primery;
+    letter-spacing: 0;
+  }
+}
