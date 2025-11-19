@@ -10,69 +10,106 @@
 
   @include respond($tablet) {
     margin-top: 5.8rem;
+    padding-top: 8rem;
+    padding-bottom: 6.1rem;
   }
   @include respond($desktop) {
-    margin-top: 6.4rem;
+    margin-top: 5.8rem;
+    padding-top: 15.5rem;
+    padding-bottom: 19.4rem;
     clip-path: $clip-path-section-desktop;
   }
 }
 .containerHero {
+  @include respond($tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 6.8rem;
+  }
+  @include respond($large-desktop) {
+    gap: 12.8rem;
+  }
 }
 
 .contentHero {
   display: flex;
   flex-direction: column;
-  max-width: 34.3rem;
-}
+  width: 100%;
+  @include respond($tablet) {
+    width: 44.3rem;
+  }
+  @include respond($desktop) {
+    width: 64.3rem;
+  }
+  .titleHero {
+    font-size: 3.5rem;
+    line-height: calc(4.4rem / 3.5rem);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    @include respond($tablet) {
+      font-size: 4rem;
+      line-height: calc(5.2rem / 4rem);
+    }
+    @include respond($desktop) {
+      font-size: 6rem;
+      line-height: calc(7.2rem / 6rem);
+    }
+  }
 
-.titleHero {
-  font-size: 3.5rem;
-  line-height: calc(4.4rem / 3.5rem);
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-}
+  .subTitleHero {
+    font-size: 1.6rem;
+    color: $text-gray;
+    line-height: calc(2rem / 1.6rem);
+    letter-spacing: 0;
+    opacity: 0.8;
+    margin-bottom: 2.4rem;
+    @include respond($desktop) {
+      width: 56.5rem;
+    }
+  }
 
-.subTitleHero {
-  font-size: 1.6rem;
-  color: $text-gray;
-  line-height: calc(2rem / 1.6rem);
-  letter-spacing: 0;
-  opacity: 0.8;
-  margin-bottom: 2.4rem;
-}
+  .form {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1.2rem;
+    height: 5rem;
 
-.form {
-  max-width: 100%;
-  position: relative;
-  margin-bottom: 1.2rem;
-}
+    @include respond($desktop) {
+      max-width: 50rem;
+    }
+    .input {
+      background-color: #201a4f;
+      border: transparent;
+      position: relative;
+      border-radius: 4px;
+      color: $white;
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      &::placeholder {
+        letter-spacing: -0.01em;
+        opacity: 0.34;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $white;
+      }
+    }
 
-.input {
-  position: relative;
-  background-color: #201a4f;
-  border-radius: 4px;
-}
+    .btnSubmit {
+      position: absolute;
+      right: 0.3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+    }
+  }
 
-.input::placeholder {
-  letter-spacing: -0.01em;
-  opacity: 0.34;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: $white;
-}
-
-.btnSubmit {
-  position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: block;
-}
-
-.subFormText {
-  font-size: 1.4rem;
-  line-height: calc(2rem / 1.4rem);
-  color: $text-primery;
-  opacity: 0.3;
-  letter-spacing: 0;
+  .subFormText {
+    font-size: 1.4rem;
+    line-height: calc(2rem / 1.4rem);
+    color: $text-primery;
+    opacity: 0.3;
+    letter-spacing: 0;
+  }
 }

@@ -6,6 +6,7 @@ import styles from "./Hero.module.scss";
 import SectionTitle from "../../components/section-title";
 import Input from "../../components/input/Input";
 import Button from "../../components/button/Button";
+import HeroCards from "./hero-cards/HeroCards";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -22,6 +23,7 @@ const Hero = () => {
     <section className={clsx("section", styles.sectionHero)}>
       <div className={clsx("container", styles.containerHero)}>
         {/* Card Hero */}
+        <HeroCards />
         <div className={styles.contentHero}>
           <SectionTitle type="h1" className={styles.titleHero}>
             моментально Копируй сделки профи трейдеров
