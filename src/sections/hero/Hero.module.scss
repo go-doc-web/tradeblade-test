@@ -1,15 +1,78 @@
-.sectionHero {
-}
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
+.sectionHero {
+  padding-top: 4rem;
+  padding-bottom: 6.1rem;
+  margin-top: 5.2rem;
+  background-color: $section-bg-dark;
+  clip-path: $clip-path-section-mobile;
+
+  @include respond($tablet) {
+    margin-top: 5.8rem;
+  }
+  @include respond($desktop) {
+    margin-top: 6.4rem;
+    clip-path: $clip-path-section-desktop;
+  }
+}
 .containerHero {
-  display: flex;
 }
 
 .contentHero {
+  display: flex;
+  flex-direction: column;
+  max-width: 34.3rem;
 }
 
 .titleHero {
+  font-size: 3.5rem;
+  line-height: calc(4.4rem / 3.5rem);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 
 .subTitleHero {
+  font-size: 1.6rem;
+  color: $text-gray;
+  line-height: calc(2rem / 1.6rem);
+  letter-spacing: 0;
+  opacity: 0.8;
+  margin-bottom: 2.4rem;
+}
+
+.form {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input {
+  position: relative;
+  background-color: #201a4f;
+  border-radius: 4px;
+}
+
+.input::placeholder {
+  letter-spacing: -0.01em;
+  opacity: 0.34;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $white;
+}
+
+.btnSubmit {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+
+.subFormText {
+  font-size: 1.4rem;
+  line-height: calc(2rem / 1.4rem);
+  color: $text-primery;
+  opacity: 0.3;
+  letter-spacing: 0;
 }
