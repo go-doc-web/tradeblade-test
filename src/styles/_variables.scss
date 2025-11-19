@@ -11,6 +11,7 @@ $main-font: "IBM Plex Sans", sans-serif;
 // Colors
 
 $white: #ffffff;
+$purple: #6a54ff;
 $accent: #57e1ff;
 $dark-1: #030718;
 
@@ -21,6 +22,11 @@ $btn-outline-accent: rgba(87, 225, 255, 0.2);
 
 $section-bg-dark: $dark-1;
 
+$hover-btn: $purple;
+
+// Shadow
+
+$btn-drop-shadow: 0 0 4px $accent;
 // Container sizes
 
 $container-mobile: 100%;

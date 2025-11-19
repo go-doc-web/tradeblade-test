@@ -9,6 +9,10 @@
     width: 10.7rem;
     height: 5.2rem;
 
+    @include respond($tablet) {
+      height: 5.8rem;
+    }
+
     @include respond($desktop) {
       width: 13.2rem;
       height: 6.4rem;

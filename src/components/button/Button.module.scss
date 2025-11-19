@@ -1,0 +1,58 @@
+@use "../../styles/variables" as *;
+
+.button {
+  padding: 1.1rem 2.4rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 1px solid transparent;
+  box-shadow: $btn-drop-shadow;
+  transition: background-color 250ms, color 250ms;
+}
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.primary {
+  font-size: 1.4rem;
+  line-height: calc(2rem / 1.4rem);
+  text-transform: uppercase;
+  color: $text-secondary;
+  background-color: $accent;
+
+  &:hover,
+  &:active {
+    background-color: $hover-btn;
+    color: $accent;
+  }
+}
+
+.secondary {
+  font-size: 1.4rem;
+  line-height: calc(2rem / 1.4rem);
+  text-transform: uppercase;
+  background-color: $btn-outline-accent;
+  color: $accent;
+  border: 1.5px solid $accent;
+
+  &:hover,
+  &:active {
+    background-color: $hover-btn;
+    color: $text-secondary;
+  }
+}
+
+.text {
+  background: none;
+  color: var(--color-primary-600);
+  padding: 0;
+  border: none;
+}
