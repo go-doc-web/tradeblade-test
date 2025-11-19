@@ -6,6 +6,8 @@ import NavLink from "../../components/nav-link";
 import Button from "../../components/button/Button";
 import styles from "./Header.module.scss";
 
+// TODO to make hover for menu-lins on desktop
+
 const navItems = [
   { name: "ЦИФРЫ", href: "#numbers" },
   { name: "СДЕЛКИ ОНЛАЙН", href: "#deals" },

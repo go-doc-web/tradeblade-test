@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavLink = ({ href, children, ...props }) => {
+const NavLink = ({ href, children, isMobile, ...props }) => {
   return (
     <a href={href} {...props}>
       {children}
