@@ -14,7 +14,8 @@
     "framer-motion": "^12.23.24",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "sass": "^1.94.1"
+    "sass": "^1.94.1",
+    "swiper": "^12.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

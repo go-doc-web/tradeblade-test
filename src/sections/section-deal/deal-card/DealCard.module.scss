@@ -1,0 +1,81 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.card {
+  position: relative;
+  padding: 1.6rem 1.6rem 1.3rem;
+  color: $white;
+  border-radius: 8px;
+  height: 20.8rem;
+  width: 29.9rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background-image: url("../../../assets/polygon__card.png"),
+    url("../../../assets/card-bg.png");
+  background-repeat: no-repeat;
+  background-position: 176px 8px, center;
+  background-size: 123px 160px, cover;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.ticker {
+  font-size: 2rem;
+  line-height: calc(2.8rem / 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.2rem;
+  color: $text-primery;
+}
+
+.meta {
+  display: block;
+  font-size: 1.4rem;
+  line-height: calc(1.8rem / 1.4rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2rem;
+  color: $text-primery;
+  opacity: 0.4;
+  margin-bottom: 4.8rem;
+}
+
+.profit {
+  font-size: 1.4rem;
+  line-height: calc(1.8rem / 1.4rem);
+  letter-spacing: -0.02em;
+  color: $text-primery;
+  opacity: 0.7;
+  margin-bottom: 0.2rem;
+
+  p {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.profitPositive {
+  color: #35ff9e;
+}
+
+.profitNegative {
+  color: tomato;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  line-height: calc(1.8rem / 1.4rem);
+  letter-spacing: -0.02em;
+  color: $text-primery;
+  opacity: 0.7;
+  margin-top: 0.9rem;
+}
+
+.date {
+  opacity: 0.4;
+}

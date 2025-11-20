@@ -1,4 +1,5 @@
 @use "./_variables" as *;
+@use "./mixins" as *;
 
 *,
 *::before,
@@ -37,4 +38,28 @@ img {
   line-height: calc(3.6rem / 2.8rem);
   letter-spacing: -0.04em;
   font-weight: 700;
+
+  @include respond($large-desktop) {
+    font-size: 4.4rem;
+    line-height: calc(5.6rem / 4.4rem);
+    letter-spacing: -0.04em;
+  }
+}
+
+.my-swiper {
+  .swiper-slide {
+    width: 299px !important;
+  }
+}
+
+.my-swiper.swiper {
+  overflow: visible;
+}
+
+.slide {
+  width: 299px;
+
+  @include respond($large-desktop) {
+    width: 299px;
+  }
 }
