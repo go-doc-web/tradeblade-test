@@ -10,6 +10,7 @@
   clip-path: $clip-path-section-mobile;
   @include respond($large-desktop) {
     padding: 9.6rem 0 17.8rem;
+    clip-path: $clip-path-section-desktop;
   }
 }
 

@@ -1,0 +1,72 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.about {
+  background-color: $white;
+  padding: 5.6rem 0 9.6rem;
+}
+
+.containerAbout {
+  @include respond($large-desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // gap: 10rem;
+  }
+}
+
+.aboutContent {
+  width: 100%;
+  margin-bottom: 4rem;
+  @include respond($large-desktop) {
+    max-width: 41.3rem;
+  }
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.aboutText {
+  font-size: 1.6rem;
+  line-height: calc(2rem / 1.6rem);
+  color: $text-secondary;
+  @include respond($large-desktop) {
+    max-width: 41.3rem;
+  }
+}
+
+.aboutText + .aboutText {
+  margin-top: 2rem;
+}
+
+.aboutForm {
+  padding: 1.6rem;
+  background-color: $purple;
+  //   flex: 0 1 auto;
+  border-radius: 4px;
+  @include respond($large-desktop) {
+    width: 63rem;
+    padding: 3.2rem;
+  }
+}
+
+.formTitle {
+  font-size: 2rem;
+  line-height: calc(2.8rem / 2rem);
+  letter-spacing: -0.04em;
+  color: $text-secondary;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  //   width: 32.4rem;
+  @include respond($large-desktop) {
+    font-size: 2.8rem;
+    line-height: calc(3.6rem / 2.8rem);
+  }
+}
+
+.inputNew {
+  background-color: #4a3bb3;
+  color: $text-primery;
+}
