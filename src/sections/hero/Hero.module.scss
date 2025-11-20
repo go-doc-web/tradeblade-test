@@ -47,6 +47,7 @@
     line-height: calc(4.4rem / 3.5rem);
     text-transform: uppercase;
     margin-bottom: 1.2rem;
+    color: $text-primery;
     @include respond($tablet) {
       font-size: 4rem;
       line-height: calc(5.2rem / 4rem);
