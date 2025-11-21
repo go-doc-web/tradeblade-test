@@ -67,6 +67,11 @@
     line-height: calc(2rem / 1.6rem);
     color: $text-primery;
     text-transform: uppercase;
+    transition: color 250ms;
+    &:hover,
+    &:active {
+      color: $hover-menu;
+    }
   }
 }
 
