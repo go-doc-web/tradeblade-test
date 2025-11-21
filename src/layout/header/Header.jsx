@@ -4,18 +4,11 @@ import clsx from "clsx";
 import Logo from "../../components/logo/Logo";
 import NavLink from "../../components/nav-link";
 import Button from "../../components/button/Button";
+import NavMenu from "../../components/nav-menu/NavMenu.jsx";
+import { navItems } from "../../config/navMenuConfig.js";
 import styles from "./Header.module.scss";
 
 // TODO to make hover for menu-lins on desktop
-
-const navItems = [
-  { name: "ЦИФРЫ", href: "#numbers" },
-  { name: "СДЕЛКИ ОНЛАЙН", href: "#deals" },
-  { name: "О КОМПАНИИ", href: "#about" },
-  { name: "КАК НАЧАТЬ", href: "#how-to" },
-  { name: "ТАРИФЫ", href: "#tariffs" },
-  { name: "FAQ", href: "#faq" },
-];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,17 +22,12 @@ const Header = () => {
       <div className={containerClasses}>
         <Logo />
         {/* Desktop menu  */}
-        <nav className={styles.desktopNav}>
-          {navItems.map((item) => (
-            <NavLink
-              key={item.name}
-              href={item.href}
-              className={styles.navLink}
-            >
-              {item.name}
-            </NavLink>
-          ))}
-        </nav>
+        <NavMenu
+          items={navItems}
+          customDesktopNav={styles.desktopNav}
+          customNavLink={styles.navLink}
+        />
+
         <div className={styles.btnHeaderGroupe}>
           <Button variant="secondary" className={styles.enterButton}>
             ВХОД

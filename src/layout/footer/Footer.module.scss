@@ -1,3 +1,42 @@
+@use "../../styles/variables" as *;
+@use "../../styles/_mixins.scss" as *;
+
 .footer {
-    
+  padding: 4rem 0 2rem;
+  background: $section-bg-dark;
+}
+.containerFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 7.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5.7rem;
+  p {
+    font-size: 1.4rem;
+    line-height: calc(2rem / 1.4rem);
+    color: $text-primery;
+    text-transform: uppercase;
+    width: 10.7rem;
+  }
+
+  .footerNav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .navLinkFooter {
+    font-size: 1.6rem;
+    line-height: calc(2rem / 1.6rem);
+    color: $text-primery;
+    text-transform: uppercase;
+  }
+
+  .right {
+  }
 }
