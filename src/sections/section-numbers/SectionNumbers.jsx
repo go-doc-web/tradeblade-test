@@ -22,7 +22,7 @@ const numbersItems = [
 
 const SectionNumbers = () => {
   return (
-    <section className={styles.sectionNumbers}>
+    <section id="numbers" className={styles.sectionNumbers}>
       <div className={clsx("container", styles.containerNumbers)}>
         <div className={styles.numbersLeft}>
           <SectionTitle

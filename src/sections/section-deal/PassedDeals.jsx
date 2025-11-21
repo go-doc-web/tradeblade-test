@@ -87,7 +87,10 @@ const PassedDeals = () => {
     );
   };
   return (
-    <section className={styles.passedDeals}>
+    <section
+      id="deals"
+      className={clsx("section-with-fixed-header", styles.passedDeals)}
+    >
       <div className={clsx("container", styles.containerPassedDeals)}>
         <div className={styles.header}>
           <SectionTitle

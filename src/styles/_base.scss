@@ -11,6 +11,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -63,3 +64,15 @@ img {
     width: 299px;
   }
 }
+
+// .section-with-fixed-header {
+//   margin-top: 10.4rem;
+
+//   @include respond($tablet) {
+//     margin-top: 11.6rem;
+//   }
+
+//   @include respond($desktop) {
+//     margin-top: 12.8rem;
+//   }
+// }

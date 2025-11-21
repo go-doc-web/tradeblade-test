@@ -10,11 +10,14 @@ const About = () => {
   const { isEqualWidth: isMobile } = useViewportWidth({ expect: 768 });
   const handleSubscribe = (email) => {
     alert(`{На ваш email: ${email} отправлено приглашение}`, email);
-    // Логика API...
+    // ....
   };
 
   return (
-    <section className={clsx("section", styles.about)}>
+    <section
+      id="about"
+      className={clsx("section-with-fixed-header", styles.about)}
+    >
       <div className={clsx("container", styles.containerAbout)}>
         <div className={styles.aboutContent}>
           <SectionTitle

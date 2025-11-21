@@ -8,11 +8,15 @@ import {
   SECTION_TITLE,
   accordionItems,
 } from "../../config/accordionItemsConfig";
+
 import styles from "./Qestions.module.scss";
 
 const Questions = () => {
   return (
-    <div className={styles.accordoin}>
+    <section
+      id="faq"
+      className={clsx("ection-with-fixed-header", styles.accordion)}
+    >
       <div className={clsx("container", styles.sectionAccordion)}>
         <SectionTitle
           className={clsx("section-title", styles.title)}
@@ -35,7 +39,7 @@ const Questions = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
