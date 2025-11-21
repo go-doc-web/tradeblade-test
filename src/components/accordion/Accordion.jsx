@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Collapse } from "react-collapse";
 import styles from "./Accordion.module.scss";
 import { useAccordionContext } from "../../store/useAccordionContext.jsx";
 
@@ -18,7 +19,7 @@ export const AccordionItem = ({
   const { isItemOpen, onToogle } = useAccordionContext();
 
   const isOpen = isItemOpen(id);
-  console.log("isOpen", isOpen);
+
   const itemClasses = clsx(customClassItem, { [styles.active]: isOpen });
   const titleClasses = clsx(customClassTitle, { [styles.active]: isOpen });
   const spanClasses = clsx(customClassIcon, { [styles.active]: isOpen });
@@ -29,7 +30,8 @@ export const AccordionItem = ({
         <h3 className={titleClasses}>{title}</h3>
         <span className={spanClasses}>{!isOpen ? iconClose : iconOpen}</span>
       </div>
-      {isOpen && (
+
+      <Collapse isOpened={isOpen}>
         <ul className={customClassListContent}>
           {content.map((p, index) => (
             <p className={spanParagraph} key={index}>
@@ -37,7 +39,7 @@ export const AccordionItem = ({
             </p>
           ))}
         </ul>
-      )}
+      </Collapse>
     </li>
   );
 };
