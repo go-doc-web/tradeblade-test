@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={containerClasses}>
-        <Logo />
+        <Logo customClass={styles.logoAnimation} />
         {/* Desktop menu  */}
         <NavMenu
           items={navItems}

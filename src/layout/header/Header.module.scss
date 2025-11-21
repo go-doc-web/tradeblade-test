@@ -20,6 +20,10 @@
   }
 }
 
+.logoAnimation {
+  animation: pulse-back 1500ms ease-in-out 1500ms forwards alternate;
+}
+
 .containerHeader {
   display: flex;
   align-items: center;
@@ -160,5 +164,16 @@
       font-size: 1.6rem;
       border: 2px;
     }
+  }
+}
+
+@keyframes pulse-back {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
   }
 }

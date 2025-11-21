@@ -7,6 +7,16 @@
   height: 13.4rem;
   display: flex;
   margin-bottom: 3.3rem;
+  animation: fade-up 1200ms ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @include respond($desktop) {
     width: 38.4rem;
@@ -25,6 +35,7 @@
   width: 17.6rem;
   height: 10.4rem;
   padding: 0.6rem 1rem;
+  animation: float 4000ms ease-in-out infinite;
 
   @include respond($desktop) {
     width: 22.5rem;
@@ -36,6 +47,16 @@
     width: 27.5rem;
     height: 16.25rem;
     padding: 0.94rem 1.56rem;
+  }
+  // Animation Float
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-10px) translateX(6px);
+    }
   }
 }
 
@@ -170,3 +191,11 @@
 .card.primary .subTwise {
   opacity: 0.6;
 }
+
+// .dashed {
+//   animation-duration: 5.5s;
+//   opacity: 0.4;
+//   border: 1.5px dashed rgba(255, 255, 255, 0.3);
+//   backdrop-filter: blur(6px);
+//   transform: scale(0.95);
+// }

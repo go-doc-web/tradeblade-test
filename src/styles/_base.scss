@@ -65,14 +65,23 @@ img {
   }
 }
 
-// .section-with-fixed-header {
-//   margin-top: 10.4rem;
+// Animation Float
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(6px);
+  }
+}
+@keyframes do-more {
+  0%,
+  100% {
+    transform: scaleZ(1.2);
+  }
 
-//   @include respond($tablet) {
-//     margin-top: 11.6rem;
-//   }
-
-//   @include respond($desktop) {
-//     margin-top: 12.8rem;
-//   }
-// }
+  50% {
+    transform: scaleZ(1);
+  }
+}
