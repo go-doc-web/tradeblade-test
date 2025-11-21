@@ -1,0 +1,75 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+.accordion {
+  padding: 5.6rem 0 5.6rem;
+
+  @include respond($large-desktop) {
+    padding: 9.6rem 0 9.6rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  @include respond($large-desktop) {
+    max-width: 84.6rem;
+    margin: 0 auto;
+  }
+}
+
+.accordionList {
+}
+
+.accordionItem {
+  padding: 1.6rem;
+  background-color: #eaeff0;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+
+  &.active {
+    background-color: $purple;
+  }
+}
+.accordionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.title {
+  margin-bottom: 4rem;
+  text-align: center;
+  @include respond($large-desktop) {
+    margin-bottom: 6.4rem;
+  }
+}
+
+.titleHeader {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: calc(2.8rem / 2rem);
+  letter-spacing: -0.04em;
+  color: $text-secondary;
+  margin-bottom: 1.2rem;
+
+  &.active {
+    color: $text-primery;
+  }
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: calc(2rem / 1.6rem);
+  letter-spacing: -0.04em;
+  color: $text-secondary;
+}
+.paragraph + .paragraph {
+  margin-top: 1.6rem;
+}
+
+.iconArrow {
+  & svg {
+    width: 24px;
+    height: 24px;
+    font-weight: 400;
+    color: #030718;
+  }
+}
