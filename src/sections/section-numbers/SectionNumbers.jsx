@@ -1,7 +1,9 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import clsx from "clsx";
 import SectionTitle from "../../components/section-title";
 import styles from "./SectionNumbers.module.scss";
+import AnimatedNumber from "../../components/animated-number/AnimatedNumber";
 
 const numbersItems = [
   { id: "1", title: "Торговой прибыли", number: 2756, label: "%" },
@@ -21,8 +23,12 @@ const numbersItems = [
 ];
 
 const SectionNumbers = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
   return (
-    <section id="numbers" className={styles.sectionNumbers}>
+    <section id="numbers" className={styles.sectionNumbers} ref={ref}>
       <div className={clsx("container", styles.containerNumbers)}>
         <div className={styles.numbersLeft}>
           <SectionTitle
@@ -42,8 +48,11 @@ const SectionNumbers = () => {
                     {numberItem.title}
                   </SectionTitle>
                   <span className={styles.number}>
-                    {numberItem.number}
-                    {numberItem.label ? numberItem.label : ""}
+                    <AnimatedNumber
+                      targetNumber={inView ? numberItem.number : 0}
+                      label={numberItem.label}
+                      duration={3000}
+                    />
                   </span>
                 </li>
               );
