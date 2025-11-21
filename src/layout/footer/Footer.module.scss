@@ -4,30 +4,62 @@
 .footer {
   padding: 4rem 0 2rem;
   background: $section-bg-dark;
+  overflow: hidden;
+  @include respond($large-desktop) {
+    padding: 2.8rem 0 4rem;
+  }
 }
 .containerFooter {
   display: flex;
   flex-direction: column;
+  @include respond($large-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .left {
   display: flex;
   align-items: flex-start;
   gap: 7.4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
   padding-bottom: 5.7rem;
+
+  @include respond($large-desktop) {
+    flex-direction: column;
+    padding-bottom: 0;
+    justify-content: space-between;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200vw;
+    height: 1px;
+    transform: translateX(-50vw);
+    background-color: rgba(255, 255, 255, 0.3);
+    @include respond($large-desktop) {
+      display: none;
+    }
+  }
   p {
     font-size: 1.4rem;
     line-height: calc(2rem / 1.4rem);
     color: $text-primery;
     text-transform: uppercase;
     width: 10.7rem;
+    margin-top: 1.6rem;
   }
 
   .footerNav {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+    @include respond($large-desktop) {
+      flex-direction: row;
+    }
   }
 
   .navLinkFooter {
@@ -36,7 +68,62 @@
     color: $text-primery;
     text-transform: uppercase;
   }
+}
 
-  .right {
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  position: relative;
+  @include respond($large-desktop) {
+    width: 41.3rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 200vh;
+    transform: translateY(-50vh);
+
+    background-color: rgba(255, 255, 255, 0.3);
+    display: none;
+    @include respond($large-desktop) {
+      display: block;
+    }
+  }
+
+  @include respond($large-desktop) {
+    align-items: flex-end;
+  }
+
+  .logoFooter {
+    img {
+      width: 16.5rem;
+      height: 8.01rem;
+
+      //   @include respond($tablet) {
+      //     height: 5.8rem;
+      //   }
+
+      //   @include respond($desktop) {
+      //     width: 13.2rem;
+      //     height: 6.4rem;
+      //   }
+    }
+  }
+
+  .copyrightFooter {
+    font-size: 1.4rem;
+    line-height: calc(2rem / 1.4rem);
+    color: $text-primery;
+    opacity: 0.5;
+
+    @include respond($large-desktop) {
+      margin-top: auto;
+      margin-bottom: 0.5rem;
+    }
   }
 }

@@ -17,10 +17,11 @@ const Footer = () => {
             customNavLink={styles.navLinkFooter}
           />
         </div>
+
         <div className={styles.right}>
-          <Logo />
+          <Logo customClass={styles.logoFooter} />
           <p className={styles.copyrightFooter}>
-            © 2022 TradeBlade. All rights reserved как назвать класс
+            © 2022 TradeBlade. All rights reserved
           </p>
         </div>
       </div>
