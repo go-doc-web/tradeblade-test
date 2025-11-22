@@ -22,7 +22,6 @@ const Button = ({
   let content = children;
 
   if (icon) {
-    // 💡 Виправлено: застосовуємо клас styles.contentWrapper до div
     content = (
       <div className={styles.contentWrapper}>
         <img src={icon} alt="Кнопка з іконкою" className={styles.icon} />

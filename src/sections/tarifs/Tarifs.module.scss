@@ -1,0 +1,67 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.sectionTarifs {
+  padding: 5.6rem 0 4.4rem;
+
+  background-color: $section-bg-dark;
+  color: #fff;
+}
+
+.title {
+  color: $text-primery;
+  margin-bottom: 2.4rem;
+  @include respond($desktop) {
+    font-size: 4.4rem;
+    line-height: calc(5.6rem / 4.4rem);
+  }
+}
+
+.switch {
+  background-color: rgba(106, 84, 255, 0.4);
+  display: flex;
+  padding: 0.4rem;
+  margin-bottom: 2.4rem;
+  border-radius: 4px;
+  @include respond($tablet) {
+    width: 41.3rem;
+  }
+  @include respond($desktop) {
+    margin-bottom: 4.4rem;
+  }
+
+  span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: calc(2.4rem / 1.8rem);
+    color: $black;
+    width: 50%;
+    display: block;
+    padding: 0.8rem 6rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include respond($desktop) {
+      font-size: 2.4rem;
+      line-height: calc(2.8rem / 2.4rem);
+    }
+  }
+  .spot {
+    background-color: #57e1ff;
+    border-radius: 4px;
+  }
+
+  .futures {
+    color: #57e1ff;
+  }
+}
+
+.cardList {
+  @include respond($tablet) {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+  }
+}
