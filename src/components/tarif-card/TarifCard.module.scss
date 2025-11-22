@@ -1,0 +1,157 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.card {
+  width: 100%;
+  padding: 1.6rem;
+  border: 1px solid $purple;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100%;
+
+  @include respond($tablet) {
+    margin-bottom: 0;
+    padding: 2.4rem;
+    width: 50%;
+  }
+  @include respond($desktop) {
+    width: 41.3rem;
+  }
+
+  &.standart {
+    background-color: transparent;
+  }
+  &.vip {
+    background-color: $purple;
+  }
+
+  &.vip .btnCardTarif:hover,
+  &.vip .btnCardTarif:active,
+  &.standart .btnCardTarif:hover,
+  &.standart .btnCardTarif:active {
+    background-color: $yellow;
+  }
+}
+
+.card + .card {
+  @media screen and (max-width: 767px) {
+    margin-top: 2rem;
+  }
+}
+
+.headerCard {
+}
+
+.headerCardTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: calc(2.8rem / 2rem);
+  letter-spacing: -0.04;
+  margin-bottom: 2.4rem;
+  @include respond($desktop) {
+    margin-bottom: 5.6rem;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: calc(4.8rem / 3.2rem);
+  }
+}
+
+.listCard {
+  flex-grow: 1;
+  li {
+    display: flex;
+    align-items: baseline;
+    padding: 0.8rem 0;
+    gap: 4px;
+  }
+  li + li {
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  }
+
+  li:first-child {
+    padding-top: 0;
+  }
+
+  li:last-child {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    padding-bottom: 0;
+  }
+}
+
+.iconItem {
+  width: 12px;
+  height: 12px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.textItem {
+  font-size: 1.6rem;
+
+  line-height: calc(2rem / 1.6rem);
+  letter-spacing: normal;
+  justify-content: space-between;
+}
+
+.footerCard {
+  margin-top: 2.4rem;
+  @include respond($desktop) {
+    margin-top: 4rem;
+  }
+
+  .tarifsPrice {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+    .priceItem {
+    }
+    .priceItem div {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .currency,
+      .price {
+        font-size: 3.5rem;
+        font-weight: 500;
+        line-height: calc(4rem / 3.5rem);
+        color: $text-primery;
+      }
+      .discount {
+        position: absolute;
+        right: -4.8rem;
+        top: 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: calc(2rem / 1.8rem);
+        color: $green-ligth;
+      }
+    }
+  }
+  .btnCardTarif {
+    width: 100%;
+    display: flex;
+    padding: 0.8rem 2.4rem;
+    flex-direction: column;
+    transition: background-color 300ms;
+
+    & span:first-child {
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: calc(2rem / 1.6rem);
+      color: $text-secondary;
+    }
+    & span:last-child {
+      font-size: 1.2rem;
+      opacity: 0.56;
+      line-height: calc(1.6rem / 1.2rem);
+      color: $text-secondary;
+    }
+  }
+}
