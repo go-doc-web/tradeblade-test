@@ -1,7 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import clsx from "clsx";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import iconArrow from "../../assets/arrowDown.svg";
+
 import styles from "./CustomSelect.module.scss";
 
 const CustomSelect = ({
+  className,
   value,
   onChange,
   options,
@@ -21,16 +26,19 @@ const CustomSelect = ({
   }, []);
 
   const selected = options.find((o) => o.value === value);
-
+  const customSelectedClasses = clsx(styles.select, className);
   return (
-    <div ref={ref} className={styles.select}>
+    <div ref={ref} className={customSelectedClasses}>
       <button
         className={styles.control}
         onClick={() => setOpen((prev) => !prev)}
         type="button"
       >
         <span>{selected ? selected.label : placeholder}</span>
-        <span className={`${styles.arrow} ${open ? styles.open : ""}`}>▼</span>
+        <span className={`${styles.arrow} ${open ? styles.open : ""}`}>
+          {/* <MdKeyboardArrowDown /> */}
+          <img src={iconArrow} alt="arrow down" />
+        </span>
       </button>
 
       {open && (

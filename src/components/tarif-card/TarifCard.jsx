@@ -43,6 +43,7 @@ const TarifCard = ({
           </div>
           <div className="dropMounth">
             <CustomSelect
+              className={styles.customSelect}
               value={period}
               onChange={setPeriod}
               options={[
