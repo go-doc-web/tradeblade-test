@@ -11,9 +11,6 @@ const Tarifs = () => {
   const currentPlans =
     pricingItemsConfig.find((item) => item.type === activeSwitch)?.plans || [];
 
-  //   const [plans] = pricingItemsConfig.filter((item) => item.type === "spot");
-  //   const itemsSpot = plans?.plans;
-
   return (
     <section id="tariffs" className={styles.sectionTarifs}>
       <div className={clsx("container", styles.containerTarifs)}>
@@ -21,12 +18,15 @@ const Tarifs = () => {
           Тарифы
         </SectionTitle>
         <div className={styles.switch}>
-          <span onClick={() => setActiveSwitch("spot")} className={styles.spot}>
+          <span
+            onClick={() => setActiveSwitch("spot")}
+            className={activeSwitch === "spot" ? styles.active : ""}
+          >
             СПОТ
           </span>
           <span
             onClick={() => setActiveSwitch("futures")}
-            className={styles.futures}
+            className={activeSwitch === "futures" ? styles.active : ""}
           >
             фьючерс
           </span>
