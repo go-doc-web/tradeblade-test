@@ -1,7 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import clsx from "clsx";
 import iconItem from "../../assets/icon-tarif-card.svg";
 import Button from "../button";
+import CustomSelect from "../select/CustomSelect";
 import styles from "./TarifCard.module.scss";
 
 const TarifCard = ({
@@ -12,8 +13,8 @@ const TarifCard = ({
   price,
   discount,
   buttonText,
-  durationOptions,
 }) => {
+  const [period, setPeriod] = useState("12");
   const cardClasses = clsx(styles.card, styles[variety], customCard);
 
   return (
@@ -41,13 +42,15 @@ const TarifCard = ({
             </div>
           </div>
           <div className="dropMounth">
-            <select name="select">
-              <option value="value1" selected>
-                {durationOptions[1]}
-              </option>
-
-              <option value="value3">{durationOptions[0]}</option>
-            </select>
+            <CustomSelect
+              className={styles.customSelect}
+              value={period}
+              onChange={setPeriod}
+              options={[
+                { value: "12", label: "12 месяцев" },
+                { value: "6", label: "6 месяцев" },
+              ]}
+            />
           </div>
         </div>
         <Button variant="primary" className={styles.btnCardTarif}>
