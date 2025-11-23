@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import iconItem from "../../assets/icon-tarif-card.svg";
 import Button from "../button";
+import Select from "../select/Select";
 import styles from "./TarifCard.module.scss";
 
 const TarifCard = ({
@@ -41,13 +42,14 @@ const TarifCard = ({
             </div>
           </div>
           <div className="dropMounth">
-            <select name="select">
+            {/* <select name="select">
               <option value="value1" selected>
                 {durationOptions[1]}
               </option>
 
               <option value="value3">{durationOptions[0]}</option>
-            </select>
+            </select> */}
+            <Select />
           </div>
         </div>
         <Button variant="primary" className={styles.btnCardTarif}>
