@@ -43,7 +43,7 @@ const ActionForm = ({
         type={inputType}
         placeholder={placeholder}
         required
-        className={styles.className}
+        className={styles.inputClass}
         value={value}
         disabled={isLoading}
       />
